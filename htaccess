@@ -1,0 +1,25 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex index.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://lysstore\.fun/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{HTTP_HOST} ^www\.lysstore.fun [NC]
+RewriteRule ^(.*)$ https://lysstore\.fun/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^shapka$ page34374972.html [NC]
+RewriteRule ^shapka/$ page34374972.html [NC]
+
+RewriteRule ^podval$ page34375134.html [NC]
+RewriteRule ^podval/$ page34375134.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild6331-3338-4235-b136-356161643733/Picture1.ico [R=302,L]
+
