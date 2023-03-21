@@ -6,7 +6,7 @@ DirectoryIndex page34375669.html
 RewriteEngine On
 
 RewriteCond %{HTTP:X-Forwarded-Proto} =http
-RewriteRule ^(.*)$ https://lysstore\.fun/$1 [R=301,L]
+RewriteRule ^(.*)$ http://lysstore\.fun/$1 [R=301,L]
 
 RewriteCond %{HTTP:X-Forwarded-Proto} =https
 RewriteCond %{HTTP_HOST} ^www\.lysstore.fun [NC]
