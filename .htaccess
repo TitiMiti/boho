@@ -10,7 +10,7 @@ RewriteRule ^(.*)$ https://lysstore\.fun/$1 [R=301,L]
 
 RewriteCond %{HTTP:X-Forwarded-Proto} =https
 RewriteCond %{HTTP_HOST} ^www\.lysstore.fun [NC]
-RewriteRule ^(.*)$ https://lysstore\.fun/$1 [R=301,L]
+RewriteRule ^(.*)$ http://lysstore\.fun/$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} /robots.txt
 RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
